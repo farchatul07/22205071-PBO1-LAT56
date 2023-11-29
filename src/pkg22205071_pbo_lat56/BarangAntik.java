@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package pkg22205071_pbo_lat56;
+package pkg22205071_pbo_lat57;
 
 /**
  *
@@ -11,47 +11,88 @@ package pkg22205071_pbo_lat56;
  Nim               : 22205071
  Prodi             : Teknik Informatika
  Kelas             : PBO1
- Deskripsi Program : untuk menampilkan umur barang antik
+ Deskripsi Program : untuk menampilkan hasil VEHICLE
  */
-public class BarangAntik {
-   private int umur;
+public class Vehicle {
+      private String myBrand;
+    private String myModel;
 
-    public BarangAntik(int umur) {
-        this.umur = umur;
+    public Vehicle() {
+       // Constructor
     }
 
-    public void tampilUmur() {
-        System.out.println("Umur barang antik: " + umur + " tahun");
+    public String getBrand() {
+        return myBrand;
+    }
+
+    public void setBrand(String brand) {
+        myBrand = brand;
+    }
+
+    public String getModel() {
+        return myModel;
+    }
+
+    public void setModel(String model) {
+        myModel = model;
     }
 }
 
-// Radio class
-class Radio extends BarangAntik {
-    private String name;
+// Bicycle class
+class Bicycle extends Vehicle {
+    private int myGearCount;
 
-    public Radio(int umur) {
-        super(umur);
+    public Bicycle() {
+        // Constructor
     }
 
-    public String getName() {
-        return name;
+    public int getGearCount() {
+        return myGearCount;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setGearCount(int gearCount) {
+        myGearCount = gearCount;
+    }
+}
+
+// Skateboard class
+class Skateboard extends Vehicle {
+    private double myBoardLength;
+
+    public Skateboard() {
+        // Constructor
+    }
+
+    public double getBoardLength() {
+        return myBoardLength;
+    }
+
+    public void setBoardLength(double boardLength) {
+        myBoardLength = boardLength;
     }
 }
 
 // Main class for testing
-class BarangAntikTest {
+class VehicleTest {
     public static void main(String[] args) {
-        Radio radio = new Radio(234);
+        Bicycle myBike = new Bicycle();
+        myBike.setBrand("Trek Bike");
+        myBike.setModel("7.4FX");
+        myBike.setGearCount(23);
 
-        // Menggunakan metode dari kelas BarangAntik
-        radio.tampilUmur();
+        Skateboard myBoard = new Skateboard();
+        myBoard.setBrand("Ally Skate");
+        myBoard.setModel("Rocket");
+        myBoard.setBoardLength(54.5);
 
-        // Menggunakan metode dari kelas Radio
-        radio.setName("Radio AM");
-        System.out.println("Nama radio: " + radio.getName());
+        // Display vehicle information
+        System.out.println("Bicycle Brand: " + myBike.getBrand());
+        System.out.println("Bicycle Model: " + myBike.getModel());
+        System.out.println("Bicycle Gear Count: " + myBike.getGearCount());
+        System.out.println();
+
+        System.out.println("Skateboard Brand: " + myBoard.getBrand());
+        System.out.println("Skateboard Model: " + myBoard.getModel());
+        System.out.println("Skateboard Board Length: " + myBoard.getBoardLength() + " inches");
     }
 }
