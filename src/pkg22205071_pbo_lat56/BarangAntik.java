@@ -7,6 +7,11 @@ package pkg22205071_pbo_lat56;
 /**
  *
  * @author user
+ Nama              : Farchatul Hudayah
+ Nim               : 22205071
+ Prodi             : Teknik Informatika
+ Kelas             : PBO1
+ Deskripsi Program : untuk menampilkan umur barang antik
  */
 public class BarangAntik {
    private int umur;
